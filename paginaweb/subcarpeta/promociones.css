@@ -1,0 +1,198 @@
+body{
+    box-sizing: border-box;
+      font-family: 'serif', sans-serif;
+      margin: 0;
+  }
+  h1{ font-size: 3.0em;}
+  h2{ font-size: 2.5em;}
+  h3{ font-size: 2em;}
+  p{ font-size: 1.25em;}
+  ul{ list-style: none;}
+  li{ font-size: 1.25em;}
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  .uno{
+    display: flex;
+    min-height: 80px;
+    background: #DDD5F5;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .Logo{
+    display: flex;
+    align-items: center;
+    color:#F5AA45
+    }
+  
+  .logodelaempresa{
+    height: 60px;
+    margin-right: 10px;
+  
+  }
+  .logodelaempresa2{
+    height: 60px;
+    margin-left: 10px;
+  }
+  
+  nav a{
+    font-weight: 600;
+    padding-right: 10px;
+  }
+  nav a:hower {
+    color:#7B13FE;
+  
+  }
+  
+  @media (max-width: 600px){
+    div{
+      flex-direction: column;
+      }
+    nav{
+      padding: 10px 0px;
+    }
+  }
+  
+  #portada{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 60vh;
+        background-image: linear-gradient(
+          20deg,
+          rgba(0,0,0,0.5),
+          rgba(0,0,0,0.5)
+      )
+      ,url("imagenes2/img20.jpg");
+      background-repeat: no-repeat;
+      background-size: COVER;
+      background-position: center center;
+  }
+  #portada h1{
+      color: white;
+  }
+  #portada a {
+    color: white;
+  
+  }
+  #especialidades{
+      background-color: #F28660  ;
+      color: #ffff;
+      text-align: center;
+  }
+  
+  #especialidades .primero{
+      padding: 100px 12px;
+  }
+  #especialidades h2{
+      margin-top: 0;
+      font-size: 45px;
+  }
+  #especialidades p{
+      display: none;
+  }
+  #especialidades .especialidades1{
+      background-position: center center;
+      background-size: cover;
+      padding: 50px 0px;
+      margin: 20px;
+      border-radius: 10px;
+  }
+  .especialidades1{
+      background-image: linear-gradient(
+          0deg,
+          rgba(1,1,1,0.5),
+          rgba(0,0,0,0.5)
+      )
+      ,url("imagenes2/img19.jpg");
+  
+  }
+  
+  #especialidades .especialidades2{
+      background-position: center center;
+      background-size: cover;
+      padding: 50px 0px;
+      margin: 20px;
+      border-radius: 10px;
+  }
+  .especialidades2{
+      background-image: linear-gradient(
+          0deg,
+          rgba(1,1,1,0.5),
+          rgba(0,0,0,0.5)
+      )
+      ,url("imagenes2/img18.jpg");
+  
+  }
+  #especialidades .especialidades3{
+      background-position: center center;
+      background-size: cover;
+      padding: 50px 0px;
+      margin: 20px;
+      border-radius: 10px;
+  }
+  .especialidades3{
+    background-image: linear-gradient(
+      0deg,
+      rgba(1,1,1,0.5),
+      rgba(0,0,0,0.5)
+      )
+          ,url("imagenes2/img17.jpg");
+  }
+  #especialidades.primero{
+    display: flex;
+    justify-content: center;
+  }
+  
+  #especialidades p{
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  #especialidades h2{
+    font-size: 4em;
+  }
+  
+  #especialidades h3{
+    margin-top: 0;
+  }
+  #contactos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color:#f1f08a ;
+      color: black;
+      height: 170px;
+  }
+  
+  #contactos h4{
+      font-size: 13px;
+  }
+  #contactos li{
+    font-size: 13px;
+  }
+  
+  #final {
+    background: #DDD5F5;
+   }
+  #final p{
+      margin: 0;
+      padding: 12px;
+      color:  #767676;
+   }
+  #final .primero{
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+   }
+  #final .primero{
+    justify-content: flex-end;
+  }

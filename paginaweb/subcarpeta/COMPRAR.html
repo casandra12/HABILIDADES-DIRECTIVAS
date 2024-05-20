@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<title>MARCAS</title>
+<link rel="stylesheet" href="COMPRAR.css">
+<link rel="icon" href="imagenes2/logos.jpg">
+      </head>
+      <body>
+        <div>
+          <div class="uno">
+             <a href="C:\Users\cassm\OneDrive\Escritorio\paginaweb\index.html" class="Logo">
+               <img src="imagenes2/logog.png" alt="logo de la compañía" class="logodelaempresa">
+                <h2 class ="nombre de la empresa"> TuNeamePC </h2>
+                 <img src="imagenes2/logog.png" alt="logo de la compañía" class="logodelaempresa2">
+                 </a>
+                 <nav>
+                  <a href="Gaming.html" class="boton">MARCAS</a>
+                  <a href="C:\Users\cassm\OneDrive\Escritorio\paginaweb\formasdepago.html" class="boton">CARRITO</a>
+                  <a href="contacto.html" class="boton">CONTACTO</a>
+                  <a href="promociones.html" class="boton">PROMOCIONES</a>
+        </nav>
+
+       </div>
+    </div>
+    <div id="portada">
+        <h1>MÁS POTENCIA POR MENOR PRECIO<br>INTEL // AMD</h1>
+     </div>
+          <div id="medidas">
+                <div class="salud">
+                    <div class="img1"></div>
+                    <div class="michi">
+                        <h2>Procesador Dell Intel</h2>
+                        <h3>Airpods</h3>
+                       <p>Precio: $29.99</p>
+                       <button onclick="agregarAlCarrito('Airpods', 29.99)">Agregar al Carrito</button>
+                   </div>
+                  </div>
+                  <div class="salud">
+                      <div class="img2"></div>
+                      <div class="michi2">
+                          <h2>Procesador AMD Ryzen 5 7600X</h2>
+                          <p>S-AM5, 4.70GHz, Six-Core, 32MB L3 Cache - no Incluye Disipador<br>5,461 pesos</p>
+                     </div>
+                    </div>
+                    <div class="salud">
+                        <div class="img3"></div>
+                        <div class="michi3">
+                            <h2>Procesador AMD Ryzen 9 5950X,</h2>
+                            <p>S-AM4, 3.40GHz, 8MB L3 Cache - no incluye Disipador<br>8,498 pesos</p>
+                       </div>
+                      </div>
+                      <div class="salud">
+                          <div class="img4"></div>
+                          <div class="michi4">
+                              <h2>Procesador Intel Core i9-11900K</h2>
+                              <p>S-1200, 3.50GHz, 8-Core, 16MB Smart Cache (11va Generación Rocket Lake)<br>8,658 pesos.</p>
+                         </div>
+                        </div>
+                        <div class="salud">
+                            <div class="img5"></div>
+                            <div class="michi5">
+                                <h2>Procesador Intel Core i7-11700F</h2>
+                                <p> S-1200, 2.50GHz, 8-Core, 16MB Smart Cache (11va Generación Rocket Lake)<br>4,235 pesos.</p>
+                           </div>
+                          </div>
+                            </div>
+
+  <div id="contactos">
+    <div class="texto">
+        <ul>
+          <h4>Contactos</h4><br>
+          <li>🐁Intagram</li>
+          <li>🐁​Facebook </li>
+          <li>🐁Lunes a viernes: 09 am - 8 pm / Sabados y domingos: 11 am - 9 pm ​</li>
+          </ul>
+          </div>
+          </div>
+  
+        <div id="final">
+        <div class="primero">
+        <p>ing.soft//2023</p>
+    </div>
+  </div>
+          </div>
+          <script>
+            function agregarAlCarrito(nombre, precio){
+              let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+              carrito.push({nombre, precio});
+              localStorage.setItem('carrito', JSON.stringify(carrito));
+              alert(`El producto "${nombre}" se agregó al carrito`)
+            }
+          </script>
+  </body>
+</html>

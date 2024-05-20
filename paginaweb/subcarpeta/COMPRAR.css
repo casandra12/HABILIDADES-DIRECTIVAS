@@ -1,0 +1,206 @@
+body{
+    box-sizing: border-box;
+      font-family: 'serif', sans-serif;
+      margin: 0;
+  }
+  h1{ font-size: 3.0em;}
+  h2{ font-size: 2.5em;}
+  h3{ font-size: 2em;}
+  p{ font-size: 1.25em;}
+  ul{ list-style: none;}
+  li{ font-size: 1.25em;}
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  .uno{
+    display: flex;
+    min-height: 80px;
+    background: #DDD5F5;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .Logo{
+    display: flex;
+    align-items: center;
+    color:#F5AA45
+    }
+  
+  .logodelaempresa{
+    height: 60px;
+    margin-right: 10px;
+  
+  }
+  .logodelaempresa2{
+    height: 60px;
+    margin-left: 10px;
+  }
+  
+  nav a{
+    font-weight: 600;
+    padding-right: 10px;
+  }
+  nav a:hower {
+    color:#7B13FE;
+  
+  }
+  @media (max-width: 600px){
+    div{
+      flex-direction: column;
+      }
+    nav{
+      padding: 10px 0px;
+    }
+  }
+  #portada{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 70vh;
+        background-image: linear-gradient(
+          20deg,
+          rgba(0,0,0,0.5),
+          rgba(0,0,0,0.5)
+      )
+      ,url("imagenes2/IMG31.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+  }
+  #portada h1{
+      color: white;
+  }
+  #portada a {
+    color: white;
+  }
+  #medidas{
+    background-color: #F9ECEC;
+  }
+  
+  #medidas .salud{
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+    padding: 40px 5px;
+    background: #E2AEF9 ;
+  }
+  #medidas .michi{
+    width: 50%;
+    max-width: 500px;
+    text-align: initial;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #medidas .img1{
+    background-image: url("imagenes2/img30.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 400px;
+  }
+  #medidas .michi2{
+    width: 50%;
+    max-width: 500px;
+    text-align: initial;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #medidas .img2{
+    background-image: url("imagenes2/img32.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 400px;
+  }
+  #medidas .michi3{
+    width: 50%;
+    max-width: 500px;
+    text-align: initial;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #medidas .img3{
+    background-image: url("imagenes2/img33.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 400px;
+  }
+  #medidas .michi4{
+    width: 50%;
+    max-width: 500px;
+    text-align: initial;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #medidas .img4{
+    background-image: url("imagenes2/img34.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 400px;
+  }
+  #medidas .michi5{
+    width: 50%;
+    max-width: 500px;
+    text-align: initial;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #medidas .img5{
+    background-image: url("imagenes2/img35.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 400px;
+  }
+  
+  #contactos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #FF8100;
+      color: black;
+      height: 170px;
+  }
+  
+  #contactos h4{
+      font-size: 13px;
+  }
+  #contactos li{
+    font-size: 13px;
+  }
+  
+  #final {
+    background: #DDD5F5;
+   }
+  #final p{
+      margin: 0;
+      padding: 12px;
+      color:  #767676;
+   }
+  #final .primero{
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+   }
+  #final .primero{
+    justify-content: flex-end;
+  }
