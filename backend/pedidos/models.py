@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models  # Importa el módulo models de Django
 from products.models import Product  # Importa el modelo Product de la otra aplicación
 
 # Define el modelo Order para representar los pedidos
