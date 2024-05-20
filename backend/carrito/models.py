@@ -1,10 +1,8 @@
 from django.db import models
-
-from django.db import models
-from products import Product  # Importa el modelo Product de la otra aplicación
+from products.models import Product  # Importa el modelo Product de la otra aplicación
 
 # Define el modelo Order para representar los pedidos
-class Pedido(models.Model):
+class Carrito(models.Model):
     # Campo que registra la fecha y hora en que se creó el pedido
     creacionFecha = models.DateTimeField(auto_now_add=True)
     # Campo que registra la fecha y hora de la última actualización del pedido
@@ -19,9 +17,9 @@ class Pedido(models.Model):
         return f"Pedido {self.id} de {self.customer_name}"
 
 # Define el modelo para representar los artículos dentro de un pedido
-class PedidoItem(models.Model):
+class CarritoItem(models.Model):
     # Indica que un artículo pertenece a un pedido
-    orden = models.ForeignKey(Pedido, related_name='items', on_delete=models.CASCADE)
+    carrito = models.ForeignKey(Carrito, related_name='items', on_delete=models.CASCADE)
     # cada PedidoItem está asociado a un Orden específico
     cantidadProd = models.ForeignKey(Product, on_delete=models.CASCADE)
     # Campo que almacena la cantidad del producto en el pedido
