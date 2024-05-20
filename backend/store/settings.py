@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'products',
     'pedidos',
     'categories',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuración de Django REST Framework
+AUTH_USER_MODEL = 'users.CustomUser'
