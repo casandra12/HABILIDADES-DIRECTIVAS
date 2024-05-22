@@ -1,0 +1,72 @@
+package com.example.myapp
+
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.firestore.FirebaseFirestore
+
+class ContactsActivity : AppCompatActivity() {
+
+    private lateinit var recyclerViewContacts: RecyclerView
+    private lateinit var fabAddContact: FloatingActionButton
+    private val firestore = FirebaseFirestore.getInstance()
+    private val contactList = mutableListOf<Contact>()
+    private lateinit var contactsAdapter: ContactsAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_contacts)
+
+        recyclerViewContacts = findViewById(R.id.recyclerViewContacts)
+        fabAddContact = findViewById(R.id.fabAddContact)
+
+        contactsAdapter = ContactsAdapter(contactList)
+        recyclerViewContacts.layoutManager = LinearLayoutManager(this)
+        recyclerViewContacts.adapter = contactsAdapter
+
+        fabAddContact.setOnClickListener {
+            addContact()
+        }
+
+        loadContacts()
+    }
+
+    private fun loadContacts() {
+        firestore.collection("contacts")
+            .get()
+            .addOnSuccessListener { documents ->
+                contactList.clear()
+                for (document in documents) {
+                    val contact = document.toObject(Contact::class.java)
+                    contactList.add(contact)
+                }
+                contactsAdapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Error al cargar contactos: ${exception.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun addContact() {
+        val newContact = Contact(
+            id = firestore.collection("contacts").document().id,
+            name = "Nuevo Contacto",
+            email = "nuevo@contacto.com"
+        )
+
+        firestore.collection("contacts")
+            .document(newContact.id)
+            .set(newContact)
+            .addOnSuccessListener {
+                contactList.add(newContact)
+                contactsAdapter.notifyItemInserted(contactList.size - 1)
+                Toast.makeText(this, "Contacto agregado", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Error al agregar contacto: ${exception.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+}
