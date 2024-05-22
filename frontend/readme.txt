@@ -1,1 +1,0 @@
-En esta carpeta el contendio del front. Pueden eliminar este archivo
